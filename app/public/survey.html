@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
 
   <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
 
   <link rel="stylesheet" type="text/css" media="screen" href="../../main.css" />
@@ -19,10 +20,76 @@
 
 <body>
 
-<h1>survey</h1>
-  
+  <h1>survey</h1>
+
+  <div class="col s12">
+    <label>Among the others, how do you rank Bimp?</label>
+    <select class="browser-default">
+      <option value="" disabled selected>Choose one</option>
+      <option value="5">Most favorably</option>
+      <option value="4">Favorably</option>
+      <option value="3">Indifferent</option>
+      <option value="2">Unfavorably</option>
+      <option value="1">Least favorably</option>
+    </select>
+  </div>
+
+  <div class="col s12">
+    <label>Among the others, how do you rank Toger?</label>
+    <select class="browser-default">
+      <option value="" disabled selected>Choose one</option>
+      <option value="5">Most favorably</option>
+      <option value="4">Favorably</option>
+      <option value="3">Indifferent</option>
+      <option value="2">Unfavorably</option>
+      <option value="1">Least favorably</option>
+    </select>
+  </div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+
+  <script type="text/javascript">
+
+
+    // In this code below we create the Front-end Javascript which "POSTS" our form data to our express server.
+    // In essence, when the user hits submit, jQuery grabs all of the fields then sends a post request to our api
+    // Our api recognizes the route (/api/tables)... and then runs the associated code (found in api-routes.js).
+    // In this case the associated code "saves" the data to the table-data.js file or waitinglist-data.js file
+    // $(".submit").on("click", function () {
+    //   console.log("submitted");
+    //   var newReservation = {
+    //     customerName: $("#reserve_name").val().trim(),
+    //     phoneNumber: $("#reserve_phone").val().trim(),
+    //     customerEmail: $("#reserve_email").val().trim(),
+    //     customerID: $("#reserve_uniqueID").val().trim()
+    //   };
+    //   console.log("new reservation", newReservation);
+
+    //   console.log(newReservation);
+    //   var currentURL = window.location.origin;
+    //   $.post(currentURL + "/api/tables", newReservation).then(
+    //     function (data) {
+    //       // If a table is available... tell user they are booked.
+    //       if (data == true) {
+    //         alert("Yay! You are officially booked!")
+    //       }
+    //       // If a table is available... tell user they on the waiting list.
+    //       if (data == false) {
+    //         alert("Sorry you are on the wait list")
+    //       }
+    //       // Clear the form when submitting
+    //       $('#reserve_name').val("");
+    //       $('#reserve_phone').val("");
+    //       $('#reserve_email').val("");
+    //       $('#reserve_uniqueID').val("");
+    //     });
+    //   return false;
+    // });
+
+
+  </script>
+
 </body>
 
 </html>
-
-
