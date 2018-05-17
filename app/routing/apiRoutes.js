@@ -9,7 +9,35 @@ module.exports = function (app) {
   })
 
   app.post("/api/friends", function (req, res) {
-    // friends.push(object)
+    let user = req.body;
+
+    let match; //user's match
+    let matchDiff = 1000;//score diff used to determine match
+
+    friends.forEach(friend => {
+      let totalDiff = 0;
+
+      for (let i = 0; i < user.scores.length; i++) {
+        let diff = Number(friend.scores[i]) - user.scores[i];
+        
+        if (diff < 0) {
+          diff = diff * -1;
+        };
+
+        totalDiff += diff;
+      }
+
+      if (totalDiff < matchDiff) {
+        matchDiff = totalDiff;
+        match = friend;
+      }
+
+    });
+
+    //console.log(match.name);
+
+    friends.push(user);
+    res.json(match);
   })
 
 };

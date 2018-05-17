@@ -14,79 +14,185 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
 
-  <link rel="stylesheet" type="text/css" media="screen" href="../../main.css" />
-  <script src="../../server.js"></script>
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
 </head>
 
 <body>
 
-  <h1>survey</h1>
+  <div class="container">
 
-  <div class="col s12">
-    <label>Among the others, how do you rank Bimp?</label>
-    <select class="browser-default">
-      <option value="" disabled selected>Choose one</option>
-      <option value="5">Most favorably</option>
-      <option value="4">Favorably</option>
-      <option value="3">Indifferent</option>
-      <option value="2">Unfavorably</option>
-      <option value="1">Least favorably</option>
-    </select>
+    <h1>tell us about yourself</h1>
+
+    <h3>Name (Required)</h3>
+    <input type="text" id="name" class="form-control" required>
+
+    <h3>Photo URL (Required)</h3>
+    <input type="text" id="photo" class="form-control" required>
+
+    <div class="col s12">
+      <label>From 1-5, how do you rank Bimp?</label>
+      <select id="q1" class="browser-default">
+        <option value="" disabled selected>Choose one</option>
+        <option value="5">5 (Best)</option>
+        <option value="4">4</option>
+        <option value="3">3</option>
+        <option value="2">2</option>
+        <option value="1">1 (Worst)</option>
+      </select>
+    </div>
+
+    <div class="col s12">
+      <label>From 1-5, how do you rank Lort?</label>
+      <select id="q2" class="browser-default">
+        <option value="" disabled selected>Choose one</option>
+        <option value="5">5 (Best)</option>
+        <option value="4">4</option>
+        <option value="3">3</option>
+        <option value="2">2</option>
+        <option value="1">1 (Worst)</option>
+      </select>
+    </div>
+
+    <div class="col s12">
+      <label>From 1-5, how do you rank Lorraine?</label>
+      <select id="q3" class="browser-default">
+        <option value="" disabled selected>Choose one</option>
+        <option value="5">5 (Best)</option>
+        <option value="4">4</option>
+        <option value="3">3</option>
+        <option value="2">2</option>
+        <option value="1">1 (Worst)</option>
+      </select>
+    </div>
+
+    <div class="col s12">
+      <label>From 1-5, how do you rank Bramp?</label>
+      <select id="q4" class="browser-default">
+        <option value="" disabled selected>Choose one</option>
+        <option value="5">5 (Best)</option>
+        <option value="4">4</option>
+        <option value="3">3</option>
+        <option value="2">2</option>
+        <option value="1">1 (Worst)</option>
+      </select>
+    </div>
+
+    <div class="col s12">
+      <label>From 1-5, how do you rank Glen?</label>
+      <select id="q5" class="browser-default">
+        <option value="" disabled selected>Choose one</option>
+        <option value="5">5 (Best)</option>
+        <option value="4">4</option>
+        <option value="3">3</option>
+        <option value="2">2</option>
+        <option value="1">1 (Worst)</option>
+      </select>
+    </div>
+
+    <div class="col s12">
+      <label>From 1-5, how do you rank Big Den?</label>
+      <select id="q6" class="browser-default">
+        <option value="" disabled selected>Choose one</option>
+        <option value="5">5 (Best)</option>
+        <option value="4">4</option>
+        <option value="3">3</option>
+        <option value="2">2</option>
+        <option value="1">1 (Worst)</option>
+      </select>
+    </div>
+
+    <div class="col s12">
+      <label>From 1-5, how do you rank Gwen?</label>
+      <select id="q7" class="browser-default">
+        <option value="" disabled selected>Choose one</option>
+        <option value="5">5 (Best)</option>
+        <option value="4">4</option>
+        <option value="3">3</option>
+        <option value="2">2</option>
+        <option value="1">1 (Worst)</option>
+      </select>
+    </div>
+
+    <div class="col s12">
+      <label>From 1-5, how do you rank Ernie?</label>
+      <select id="q8" class="browser-default">
+        <option value="" disabled selected>Choose one</option>
+        <option value="5">5 (Best)</option>
+        <option value="4">4</option>
+        <option value="3">3</option>
+        <option value="2">2</option>
+        <option value="1">1 (Worst)</option>
+      </select>
+    </div>
+
+    <div class="col s12">
+      <label>From 1-5, how do you rank Toger?</label>
+      <select id="q9" class="browser-default">
+        <option value="" disabled selected>Choose one</option>
+        <option value="5">5 (Best)</option>
+        <option value="4">4</option>
+        <option value="3">3</option>
+        <option value="2">2</option>
+        <option value="1">1 (Worst)</option>
+      </select>
+    </div>
+
+    <div class="col s12">
+      <label>From 1-5, how do you rank the Flapjacks?</label>
+      <select id="q10" class="browser-default">
+        <option value="" disabled selected>Choose one</option>
+        <option value="5">5 (Best)</option>
+        <option value="4">4</option>
+        <option value="3">3</option>
+        <option value="2">2</option>
+        <option value="1">1 (Worst)</option>
+      </select>
+    </div>
+
+    <button id="submit">Submit</button>
+
   </div>
-
-  <div class="col s12">
-    <label>Among the others, how do you rank Toger?</label>
-    <select class="browser-default">
-      <option value="" disabled selected>Choose one</option>
-      <option value="5">Most favorably</option>
-      <option value="4">Favorably</option>
-      <option value="3">Indifferent</option>
-      <option value="2">Unfavorably</option>
-      <option value="1">Least favorably</option>
-    </select>
-  </div>
-
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
 
-  <script type="text/javascript">
+  <script>
+    $("#submit").on("click", function () {
 
+      console.log("clicked submit");
 
-    // In this code below we create the Front-end Javascript which "POSTS" our form data to our express server.
-    // In essence, when the user hits submit, jQuery grabs all of the fields then sends a post request to our api
-    // Our api recognizes the route (/api/tables)... and then runs the associated code (found in api-routes.js).
-    // In this case the associated code "saves" the data to the table-data.js file or waitinglist-data.js file
-    // $(".submit").on("click", function () {
-    //   console.log("submitted");
-    //   var newReservation = {
-    //     customerName: $("#reserve_name").val().trim(),
-    //     phoneNumber: $("#reserve_phone").val().trim(),
-    //     customerEmail: $("#reserve_email").val().trim(),
-    //     customerID: $("#reserve_uniqueID").val().trim()
-    //   };
-    //   console.log("new reservation", newReservation);
+      var profile = {
+        name: $("#name").val().trim(),
+        photo: $("#photo").val().trim(),
+        scores: [
+          $("#q1").val(),
+          $("#q2").val(),
+          $("#q3").val(),
+          $("#q4").val(),
+          $("#q5").val(),
+          $("#q6").val(),
+          $("#q7").val(),
+          $("#q8").val(),
+          $("#q9").val(),
+          $("#q10").val(),
+        ]
+      };
 
-    //   console.log(newReservation);
-    //   var currentURL = window.location.origin;
-    //   $.post(currentURL + "/api/tables", newReservation).then(
-    //     function (data) {
-    //       // If a table is available... tell user they are booked.
-    //       if (data == true) {
-    //         alert("Yay! You are officially booked!")
-    //       }
-    //       // If a table is available... tell user they on the waiting list.
-    //       if (data == false) {
-    //         alert("Sorry you are on the wait list")
-    //       }
-    //       // Clear the form when submitting
-    //       $('#reserve_name').val("");
-    //       $('#reserve_phone').val("");
-    //       $('#reserve_email').val("");
-    //       $('#reserve_uniqueID').val("");
-    //     });
-    //   return false;
-    // });
+      console.log(profile);
 
+      let score = profile.scores;
+      console.log(score);
+
+      var currentURL = window.location.origin;
+
+      $.post(currentURL + "/api/friends", profile).then(
+        function (data) {
+          console.log("data ", data);
+
+          // Clear the form
+        });
+
+      return false;
+    });
 
   </script>
 
