@@ -4,152 +4,160 @@
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Page Title</title>
+  <title>Friend Finder</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" type="text/css" media="screen" href="reset.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
 
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
 
-  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
 </head>
 
 <body>
 
   <div class="container">
 
-    <h1>tell us about yourself</h1>
+    <section id="user-info">
+      <h1>tell us about yourself</h1>
 
-    <h3>Name (Required)</h3>
-    <input type="text" id="name" class="form-control" required>
+      <h3>name (required)</h3>
+      <input type="text" id="name" class="form-control" required>
 
-    <h3>Photo URL (Required)</h3>
-    <input type="text" id="photo" class="form-control" required>
+      <h3>photo URL (required)</h3>
+      <input type="text" id="photo" class="form-control" required>
+    </section>
 
-    <div class="col s12">
-      <label>From 1-5, how do you rank Bimp?</label>
-      <select id="q1" class="browser-default">
-        <option value="" disabled selected>Choose one</option>
-        <option value="5">5 (Best)</option>
-        <option value="4">4</option>
-        <option value="3">3</option>
-        <option value="2">2</option>
-        <option value="1">1 (Worst)</option>
-      </select>
-    </div>
+    <section id="questions">
+        <h1>what are your impressions of the following topics</h1>
+        <h4>* choose from 1 (worst) to 5 (best)</h4>
 
-    <div class="col s12">
-      <label>From 1-5, how do you rank Lort?</label>
-      <select id="q2" class="browser-default">
-        <option value="" disabled selected>Choose one</option>
-        <option value="5">5 (Best)</option>
-        <option value="4">4</option>
-        <option value="3">3</option>
-        <option value="2">2</option>
-        <option value="1">1 (Worst)</option>
-      </select>
-    </div>
+      <div class="col s12">
+        <h3>togers</h3>
+        <select id="q1" class="q browser-default">
+          <option value="" disabled selected>Choose one</option>
+          <option value="5">5 (Best)</option>
+          <option value="4">4</option>
+          <option value="3">3</option>
+          <option value="2">2</option>
+          <option value="1">1 (Worst)</option>
+        </select>
+      </div>
 
-    <div class="col s12">
-      <label>From 1-5, how do you rank Lorraine?</label>
-      <select id="q3" class="browser-default">
-        <option value="" disabled selected>Choose one</option>
-        <option value="5">5 (Best)</option>
-        <option value="4">4</option>
-        <option value="3">3</option>
-        <option value="2">2</option>
-        <option value="1">1 (Worst)</option>
-      </select>
-    </div>
+      <div class="col s12">
+          <h3>the pecking order</h3>
+          <select id="q2" class="q browser-default">
+          <option value="" disabled selected>Choose one</option>
+          <option value="5">5 (Best)</option>
+          <option value="4">4</option>
+          <option value="3">3</option>
+          <option value="2">2</option>
+          <option value="1">1 (Worst)</option>
+        </select>
+      </div>
 
-    <div class="col s12">
-      <label>From 1-5, how do you rank Bramp?</label>
-      <select id="q4" class="browser-default">
-        <option value="" disabled selected>Choose one</option>
-        <option value="5">5 (Best)</option>
-        <option value="4">4</option>
-        <option value="3">3</option>
-        <option value="2">2</option>
-        <option value="1">1 (Worst)</option>
-      </select>
-    </div>
+      <div class="col s12">
+          <h3>meatball subs</h3>
+          <select id="q3" class="q browser-default">
+          <option value="" disabled selected>Choose one</option>
+          <option value="5">5 (Best)</option>
+          <option value="4">4</option>
+          <option value="3">3</option>
+          <option value="2">2</option>
+          <option value="1">1 (Worst)</option>
+        </select>
+      </div>
 
-    <div class="col s12">
-      <label>From 1-5, how do you rank Glen?</label>
-      <select id="q5" class="browser-default">
-        <option value="" disabled selected>Choose one</option>
-        <option value="5">5 (Best)</option>
-        <option value="4">4</option>
-        <option value="3">3</option>
-        <option value="2">2</option>
-        <option value="1">1 (Worst)</option>
-      </select>
-    </div>
+      <div class="col s12">
+          <h3>incels</h3>
+          <select id="q4" class="q browser-default">
+          <option value="" disabled selected>Choose one</option>
+          <option value="5">5 (Best)</option>
+          <option value="4">4</option>
+          <option value="3">3</option>
+          <option value="2">2</option>
+          <option value="1">1 (Worst)</option>
+        </select>
+      </div>
 
-    <div class="col s12">
-      <label>From 1-5, how do you rank Big Den?</label>
-      <select id="q6" class="browser-default">
-        <option value="" disabled selected>Choose one</option>
-        <option value="5">5 (Best)</option>
-        <option value="4">4</option>
-        <option value="3">3</option>
-        <option value="2">2</option>
-        <option value="1">1 (Worst)</option>
-      </select>
-    </div>
+      <div class="col s12">
+          <h3>goo</h3>
+          <select id="q5" class="q browser-default">
+          <option value="" disabled selected>Choose one</option>
+          <option value="5">5 (Best)</option>
+          <option value="4">4</option>
+          <option value="3">3</option>
+          <option value="2">2</option>
+          <option value="1">1 (Worst)</option>
+        </select>
+      </div>
 
-    <div class="col s12">
-      <label>From 1-5, how do you rank Gwen?</label>
-      <select id="q7" class="browser-default">
-        <option value="" disabled selected>Choose one</option>
-        <option value="5">5 (Best)</option>
-        <option value="4">4</option>
-        <option value="3">3</option>
-        <option value="2">2</option>
-        <option value="1">1 (Worst)</option>
-      </select>
-    </div>
+      <div class="col s12">
+          <h3>vienna</h3>
+          <select id="q6" class="q browser-default">
+          <option value="" disabled selected>Choose one</option>
+          <option value="5">5 (Best)</option>
+          <option value="4">4</option>
+          <option value="3">3</option>
+          <option value="2">2</option>
+          <option value="1">1 (Worst)</option>
+        </select>
+      </div>
 
-    <div class="col s12">
-      <label>From 1-5, how do you rank Ernie?</label>
-      <select id="q8" class="browser-default">
-        <option value="" disabled selected>Choose one</option>
-        <option value="5">5 (Best)</option>
-        <option value="4">4</option>
-        <option value="3">3</option>
-        <option value="2">2</option>
-        <option value="1">1 (Worst)</option>
-      </select>
-    </div>
+      <div class="col s12">
+          <h3>Brown Chevrolet Corvettes</h3>
+          <select id="q7" class="q browser-default">
+          <option value="" disabled selected>Choose one</option>
+          <option value="5">5 (Best)</option>
+          <option value="4">4</option>
+          <option value="3">3</option>
+          <option value="2">2</option>
+          <option value="1">1 (Worst)</option>
+        </select>
+      </div>
 
-    <div class="col s12">
-      <label>From 1-5, how do you rank Toger?</label>
-      <select id="q9" class="browser-default">
-        <option value="" disabled selected>Choose one</option>
-        <option value="5">5 (Best)</option>
-        <option value="4">4</option>
-        <option value="3">3</option>
-        <option value="2">2</option>
-        <option value="1">1 (Worst)</option>
-      </select>
-    </div>
+      <div class="col s12">
+          <h3>togerism</h3>
+          <select id="q8" class="q browser-default">
+          <option value="" disabled selected>Choose one</option>
+          <option value="5">5 (Best)</option>
+          <option value="4">4</option>
+          <option value="3">3</option>
+          <option value="2">2</option>
+          <option value="1">1 (Worst)</option>
+        </select>
+      </div>
 
-    <div class="col s12">
-      <label>From 1-5, how do you rank the Flapjacks?</label>
-      <select id="q10" class="browser-default">
-        <option value="" disabled selected>Choose one</option>
-        <option value="5">5 (Best)</option>
-        <option value="4">4</option>
-        <option value="3">3</option>
-        <option value="2">2</option>
-        <option value="1">1 (Worst)</option>
-      </select>
-    </div>
+      <div class="col s12">
+          <h3>enlightenment</h3>
+          <select id="q9" class="q browser-default">
+          <option value="" disabled selected>Choose one</option>
+          <option value="5">5 (Best)</option>
+          <option value="4">4</option>
+          <option value="3">3</option>
+          <option value="2">2</option>
+          <option value="1">1 (Worst)</option>
+        </select>
+      </div>
 
-    <button id="submit">Submit</button>
+      <div class="col s12">
+          <h3>Goethe</h3>
+          <select id="q10" class="q browser-default">
+          <option value="" disabled selected>Choose one</option>
+          <option value="1">1 (worst)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (best)</option>
+        </select>
+      </div>
+
+      <button id="submit" class="waves-effect waves-light btn">submit</button>
+    </section>
 
   </div>
 

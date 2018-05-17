@@ -17,7 +17,7 @@ let friends = [
   },
   {
     "name": "Fives",
-    "photo": "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+    "photo": "https://thumb1.shutterstock.com/mosaic_250/2967241/657764164/stock-photo-portrait-of-beautiful-redhead-girl-smiling-looking-at-camera-657764164.jpg",
     "scores": [
       5,
       5,
@@ -33,7 +33,7 @@ let friends = [
   },
   {
     "name": "Fours",
-    "photo": "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+    "photo": "https://evermotion.org/files/EVRprfolio/b339ccb0e26b1971e6b59f1bc25bf5bf071e1f1c.jpg",
     "scores": [
       4,
       4,
@@ -49,7 +49,7 @@ let friends = [
   },
   {
     "name": "Threes",
-    "photo": "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+    "photo": "https://thumb9.shutterstock.com/mosaic_250/1849259/575234476/stock-photo-good-looking-man-in-glasses-portrait-575234476.jpg",
     "scores": [
       3,
       3,
@@ -65,7 +65,7 @@ let friends = [
   },
   {
     "name": "Twos",
-    "photo": "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+    "photo": "https://thumb1.shutterstock.com/mosaic_250/2936380/561625168/stock-photo-portrait-of-young-tender-redhead-teenage-girl-with-healthy-freckled-skin-wearing-striped-top-561625168.jpg",
     "scores": [
       2,
       2,
@@ -81,7 +81,7 @@ let friends = [
   },
   {
     "name": "Ones",
-    "photo": "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+    "photo": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&h=350",
     "scores": [
       1,
       1,
