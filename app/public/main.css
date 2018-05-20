@@ -1,0 +1,53 @@
+#modal-container{
+  display:none;
+  height:100%;
+  width:100%;
+  left:0;
+  top:0;
+  z-index:0;
+  position: fixed;
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */}
+
+#modal-content{
+  z-index:1;
+  background-color: white;
+  margin:10px auto 0px auto;
+  overflow: auto;  
+  padding-bottom:30px;
+  min-width: 250px;
+  max-width: 350px;
+}
+
+#match-pic{
+  width:300px;
+  display:inherit;
+  margin:0 auto;
+}
+
+label{
+  color:black;
+  font-size: 2em;
+}
+h1{
+  color:red;
+}
+h4{
+  margin-bottom:50px;
+  font-style:italic;
+}
+section{
+  margin-bottom:50px;
+}
+select{
+  font-size:2rem;
+  margin-bottom:30px;
+  color:slategray;
+  min-height:2em;
+
+}
+.btn{
+  font-size:2rem;
+  min-height: 2em;
+  padding: 10px;
+}

@@ -20,6 +20,17 @@
 
 <body>
 
+  <div id="modal-container">
+    <div id="modal-content" class="container">
+      <h3 class="center-align">
+        <span id="user-name">&lt;USER&gt;, </span>
+        </span>Your match is
+        <span id="match-name">&lt;MATCH&gt;</span>
+      </h3>
+      <img id="match-pic" class="center-align" src="https://via.placeholder.com/200x200?text=Your+Match+Placeholder">
+    </div>
+  </div>
+
   <div class="container">
 
     <section id="user-info">
@@ -33,8 +44,8 @@
     </section>
 
     <section id="questions">
-        <h1>what are your impressions of the following topics</h1>
-        <h4>* choose from 1 (worst) to 5 (best)</h4>
+      <h1>what are your impressions of the following topics</h1>
+      <h4>* choose from 1 (worst) to 5 (best)</h4>
 
       <div class="col s12">
         <h3>togers</h3>
@@ -49,8 +60,8 @@
       </div>
 
       <div class="col s12">
-          <h3>the pecking order</h3>
-          <select id="q2" class="q browser-default">
+        <h3>the pecking order</h3>
+        <select id="q2" class="q browser-default">
           <option value="" disabled selected>Choose one</option>
           <option value="1">1 (worst)</option>
           <option value="2">2</option>
@@ -61,8 +72,8 @@
       </div>
 
       <div class="col s12">
-          <h3>meatball subs</h3>
-          <select id="q3" class="q browser-default">
+        <h3>meatball subs</h3>
+        <select id="q3" class="q browser-default">
           <option value="" disabled selected>Choose one</option>
           <option value="1">1 (worst)</option>
           <option value="2">2</option>
@@ -73,8 +84,8 @@
       </div>
 
       <div class="col s12">
-          <h3>incels</h3>
-          <select id="q4" class="q browser-default">
+        <h3>incels</h3>
+        <select id="q4" class="q browser-default">
           <option value="" disabled selected>Choose one</option>
           <option value="1">1 (worst)</option>
           <option value="2">2</option>
@@ -85,8 +96,8 @@
       </div>
 
       <div class="col s12">
-          <h3>goo</h3>
-          <select id="q5" class="q browser-default">
+        <h3>goo</h3>
+        <select id="q5" class="q browser-default">
           <option value="" disabled selected>Choose one</option>
           <option value="1">1 (worst)</option>
           <option value="2">2</option>
@@ -97,8 +108,8 @@
       </div>
 
       <div class="col s12">
-          <h3>vienna</h3>
-          <select id="q6" class="q browser-default">
+        <h3>vienna</h3>
+        <select id="q6" class="q browser-default">
           <option value="" disabled selected>Choose one</option>
           <option value="1">1 (worst)</option>
           <option value="2">2</option>
@@ -109,8 +120,8 @@
       </div>
 
       <div class="col s12">
-          <h3>Brown Chevrolet Corvettes</h3>
-          <select id="q7" class="q browser-default">
+        <h3>Brown Chevrolet Corvettes</h3>
+        <select id="q7" class="q browser-default">
           <option value="" disabled selected>Choose one</option>
           <option value="1">1 (worst)</option>
           <option value="2">2</option>
@@ -121,8 +132,8 @@
       </div>
 
       <div class="col s12">
-          <h3>togerism</h3>
-          <select id="q8" class="q browser-default">
+        <h3>togerism</h3>
+        <select id="q8" class="q browser-default">
           <option value="" disabled selected>Choose one</option>
           <option value="1">1 (worst)</option>
           <option value="2">2</option>
@@ -133,8 +144,8 @@
       </div>
 
       <div class="col s12">
-          <h3>enlightenment</h3>
-          <select id="q9" class="q browser-default">
+        <h3>enlightenment</h3>
+        <select id="q9" class="q browser-default">
           <option value="" disabled selected>Choose one</option>
           <option value="1">1 (worst)</option>
           <option value="2">2</option>
@@ -145,8 +156,8 @@
       </div>
 
       <div class="col s12">
-          <h3>Goethe</h3>
-          <select id="q10" class="q browser-default">
+        <h3>Goethe</h3>
+        <select id="q10" class="q browser-default">
           <option value="" disabled selected>Choose one</option>
           <option value="1">1 (worst)</option>
           <option value="2">2</option>
@@ -196,7 +207,13 @@
         function (data) {
           console.log("data ", data);
 
-          // Clear the form
+          //clear the form
+
+          //load modal
+          $('#user-name').text(profile.name);
+          $('#match-name').text(data.name);
+          $('#match-pic').attr('src', data.photo);
+          $('#modal-container').css('display', 'block');
         });
 
       return false;
