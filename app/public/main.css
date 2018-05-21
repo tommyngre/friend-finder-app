@@ -19,35 +19,49 @@
   max-width: 350px;
 }
 
+.padding-20{
+  padding:0px 20px;
+}
+
 #match-pic{
-  width:300px;
+  width:250px;
   display:inherit;
-  margin:0 auto;
+  margin:0 auto 20px auto;
+}
+
+#email{
+margin: 0px auto;
+display: inherit;
 }
 
 label{
   color:black;
   font-size: 2em;
 }
-h1{
+h2{
   color:red;
 }
-h4{
+h5{
   margin-bottom:50px;
   font-style:italic;
 }
 section{
   margin-bottom:50px;
 }
+
+#name,#email-addr,#photo{
+  font-size:1.5rem;  
+}
+
 select{
-  font-size:2rem;
+  font-size:1.5rem;
   margin-bottom:30px;
   color:slategray;
   min-height:2em;
 
 }
 .btn{
-  font-size:2rem;
-  min-height: 2em;
+  font-size:1.8rem;
+  min-height: 2.2em;
   padding: 10px;
 }

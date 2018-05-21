@@ -22,33 +22,39 @@
 
   <div id="modal-container">
     <div id="modal-content" class="container">
-      <h3 class="center-align">
-        <span id="user-name">&lt;USER&gt;, </span>
-        </span>Your match is
-        <span id="match-name">&lt;MATCH&gt;</span>
-      </h3>
-      <img id="match-pic" class="center-align" src="https://via.placeholder.com/200x200?text=Your+Match+Placeholder">
+      <div class="padding-20">
+        <h4 class="center-align">
+          <span id="user-name">&lt;USER&gt;</span>, you matched with
+          <span id="match-name">&lt;MATCH&gt;</span>!
+        </h4>
+        <img id="match-pic" class="center-align" src="https://via.placeholder.com/200x200?text=Your+Match+Placeholder">
+        <a id="email" class="center-align"><button class="waves-effect waves-light btn">email</button>
+        </a>
+      </div>
     </div>
   </div>
 
   <div class="container">
 
     <section id="user-info">
-      <h1>tell us about yourself</h1>
+      <h2>tell us about yourself</h2>
 
-      <h3>name (required)</h3>
+      <h4>name (required)</h4>
       <input type="text" id="name" class="form-control" required>
 
-      <h3>photo URL (required)</h3>
+      <h4>email address (required)</h4>
+      <input type="text" id="email-addr" class="form-control" required>
+
+      <h4>photo URL (required)</h4>
       <input type="text" id="photo" class="form-control" required>
     </section>
 
     <section id="questions">
-      <h1>what are your impressions of the following topics</h1>
-      <h4>* choose from 1 (worst) to 5 (best)</h4>
+      <h2>what are your impressions of the following topics</h2>
+      <h5>* choose from 1 (worst) to 5 (best)</h5>
 
       <div class="col s12">
-        <h3>togers</h3>
+        <h4>togers</h4>
         <select id="q1" class="q browser-default">
           <option value="" disabled selected>Choose one</option>
           <option value="1">1 (worst)</option>
@@ -60,7 +66,7 @@
       </div>
 
       <div class="col s12">
-        <h3>the pecking order</h3>
+        <h4>the pecking order</h4>
         <select id="q2" class="q browser-default">
           <option value="" disabled selected>Choose one</option>
           <option value="1">1 (worst)</option>
@@ -72,7 +78,7 @@
       </div>
 
       <div class="col s12">
-        <h3>meatball subs</h3>
+        <h4>meatball subs</h4>
         <select id="q3" class="q browser-default">
           <option value="" disabled selected>Choose one</option>
           <option value="1">1 (worst)</option>
@@ -84,7 +90,7 @@
       </div>
 
       <div class="col s12">
-        <h3>incels</h3>
+        <h4>incels</h4>
         <select id="q4" class="q browser-default">
           <option value="" disabled selected>Choose one</option>
           <option value="1">1 (worst)</option>
@@ -96,7 +102,7 @@
       </div>
 
       <div class="col s12">
-        <h3>goo</h3>
+        <h4>goo</h4>
         <select id="q5" class="q browser-default">
           <option value="" disabled selected>Choose one</option>
           <option value="1">1 (worst)</option>
@@ -108,7 +114,7 @@
       </div>
 
       <div class="col s12">
-        <h3>vienna</h3>
+        <h4>vienna</h4>
         <select id="q6" class="q browser-default">
           <option value="" disabled selected>Choose one</option>
           <option value="1">1 (worst)</option>
@@ -120,7 +126,7 @@
       </div>
 
       <div class="col s12">
-        <h3>Brown Chevrolet Corvettes</h3>
+        <h4>Brown Chevrolet Corvettes</h4>
         <select id="q7" class="q browser-default">
           <option value="" disabled selected>Choose one</option>
           <option value="1">1 (worst)</option>
@@ -132,7 +138,7 @@
       </div>
 
       <div class="col s12">
-        <h3>togerism</h3>
+        <h4>togerism</h4>
         <select id="q8" class="q browser-default">
           <option value="" disabled selected>Choose one</option>
           <option value="1">1 (worst)</option>
@@ -144,7 +150,7 @@
       </div>
 
       <div class="col s12">
-        <h3>enlightenment</h3>
+        <h4>enlightenment</h4>
         <select id="q9" class="q browser-default">
           <option value="" disabled selected>Choose one</option>
           <option value="1">1 (worst)</option>
@@ -156,7 +162,7 @@
       </div>
 
       <div class="col s12">
-        <h3>Goethe</h3>
+        <h4>Goethe</h4>
         <select id="q10" class="q browser-default">
           <option value="" disabled selected>Choose one</option>
           <option value="1">1 (worst)</option>
@@ -175,12 +181,21 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
 
   <script>
+
     $("#submit").on("click", function () {
 
-      console.log("clicked submit");
+      //check existence of values
 
+
+      //break down name in order to make 'sentence case'
+      let tmpName = $("#name").val().trim().toLowerCase().split(" ");
+      let name = tmpName.map(piece => piece.charAt(0).toUpperCase() + piece.substring(1))
+        .join(' ');
+
+      //save 'profile' obj to post
       var profile = {
-        name: $("#name").val().trim(),
+        name: name,
+        email: $("#email-addr").val().trim(),
         photo: $("#photo").val().trim(),
         scores: [
           $("#q1").val(),
@@ -196,28 +211,34 @@
         ]
       };
 
-      console.log(profile);
-
-      let score = profile.scores;
-      console.log(score);
-
       var currentURL = window.location.origin;
 
       $.post(currentURL + "/api/friends", profile).then(
         function (data) {
           console.log("data ", data);
 
-          //clear the form
+          // for each question, set to 'Choose one'
 
           //load modal
           $('#user-name').text(profile.name);
           $('#match-name').text(data.name);
+          $('#email').attr('href', 'mailto:' + data.email);
           $('#match-pic').attr('src', data.photo);
           $('#modal-container').css('display', 'block');
         });
 
-      return false;
+      //clear the form
+      $('#name').val('');
+      $('#photo').val('');
+      $('#email-addr').val('');
+
     });
+
+    //close modal
+    $("#modal-container").on('click', function(){
+      $(this).css('display','none');
+    });
+
 
   </script>
 

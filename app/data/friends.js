@@ -1,7 +1,8 @@
 let friends = [
   {
     "name": "Ahmed",
-    "photo": "https://media.licdn.com/dms/image/C4D03AQHU39wmFmFA1Q/profile-displayphoto-shrink_200_200/0",
+    "email": "ahmed@fakeEmail.fake",
+    "photo": "https://www.arch2o.com/wp-content/uploads/2015/03/Arch2O-Portraits-Sergio-Lopez-03.jpg",
     "scores": [
       5,
       1,
@@ -17,7 +18,8 @@ let friends = [
   },
   {
     "name": "Fives",
-    "photo": "https://thumb1.shutterstock.com/mosaic_250/2967241/657764164/stock-photo-portrait-of-beautiful-redhead-girl-smiling-looking-at-camera-657764164.jpg",
+    "email": "fives@fakeEmail.fake",
+    "photo": "https://www.arch2o.com/wp-content/uploads/2015/03/Arch2O-Portraits-Sergio-Lopez-06.jpg",
     "scores": [
       5,
       5,
@@ -33,7 +35,8 @@ let friends = [
   },
   {
     "name": "Fours",
-    "photo": "https://evermotion.org/files/EVRprfolio/b339ccb0e26b1971e6b59f1bc25bf5bf071e1f1c.jpg",
+    "email": "fours@fakeEmail.fake",
+    "photo": "https://www.arch2o.com/wp-content/uploads/2015/03/Arch2O-Portraits-Sergio-Lopez-10.jpg",
     "scores": [
       4,
       4,
@@ -49,7 +52,8 @@ let friends = [
   },
   {
     "name": "Threes",
-    "photo": "https://thumb9.shutterstock.com/mosaic_250/1849259/575234476/stock-photo-good-looking-man-in-glasses-portrait-575234476.jpg",
+    "email": "thress@fakeEmail.fake",
+    "photo": "https://www.arch2o.com/wp-content/uploads/2015/03/Arch2O-Portraits-Sergio-Lopez-01.jpg",
     "scores": [
       3,
       3,
@@ -65,7 +69,8 @@ let friends = [
   },
   {
     "name": "Twos",
-    "photo": "https://thumb1.shutterstock.com/mosaic_250/2936380/561625168/stock-photo-portrait-of-young-tender-redhead-teenage-girl-with-healthy-freckled-skin-wearing-striped-top-561625168.jpg",
+    "email": "twos@fakeEmail.fake",
+    "photo": "https://www.arch2o.com/wp-content/uploads/2015/03/Arch2O-Portraits-Sergio-Lopez-08.jpg",
     "scores": [
       2,
       2,
@@ -81,7 +86,8 @@ let friends = [
   },
   {
     "name": "Ones",
-    "photo": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "email": "ones@fakeEmail.fake",
+    "photo": "https://www.arch2o.com/wp-content/uploads/2015/03/Arch2O-Portraits-Sergio-Lopez-04.jpg",
     "scores": [
       1,
       1,
