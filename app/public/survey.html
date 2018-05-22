@@ -15,6 +15,7 @@
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+  <script src="main.js"></script>
 
 </head>
 
@@ -23,12 +24,12 @@
   <div id="modal-container">
     <div id="modal-content" class="container">
       <div class="padding-20">
-        <h4 class="center-align">
+        <h4 class="center">
           <span id="user-name">&lt;USER&gt;</span>, you matched with
           <span id="match-name">&lt;MATCH&gt;</span>!
         </h4>
-        <img id="match-pic" class="center-align" src="https://via.placeholder.com/200x200?text=Your+Match+Placeholder">
-        <a id="email" class="center-align">
+        <img id="match-pic" class="center" src="https://via.placeholder.com/200x200?text=Your+Match+Placeholder">
+        <a id="email" class="center">
           <button class="waves-effect waves-light btn">email</button>
         </a>
       </div>
@@ -57,120 +58,60 @@
       <div class="col s12">
         <h4>togers</h4>
         <select id="q1" class="q browser-default">
-          <option value="" disabled selected>Choose one</option>
-          <option value="1">1 (worst)</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5 (best)</option>
         </select>
       </div>
 
       <div class="col s12">
         <h4>the pecking order</h4>
         <select id="q2" class="q browser-default">
-          <option value="" disabled selected>Choose one</option>
-          <option value="1">1 (worst)</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5 (best)</option>
         </select>
       </div>
 
       <div class="col s12">
         <h4>meatball subs</h4>
         <select id="q3" class="q browser-default">
-          <option value="" disabled selected>Choose one</option>
-          <option value="1">1 (worst)</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5 (best)</option>
         </select>
       </div>
 
       <div class="col s12">
         <h4>incels</h4>
         <select id="q4" class="q browser-default">
-          <option value="" disabled selected>Choose one</option>
-          <option value="1">1 (worst)</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5 (best)</option>
         </select>
       </div>
 
       <div class="col s12">
         <h4>goo</h4>
         <select id="q5" class="q browser-default">
-          <option value="" disabled selected>Choose one</option>
-          <option value="1">1 (worst)</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5 (best)</option>
         </select>
       </div>
 
       <div class="col s12">
         <h4>vienna</h4>
         <select id="q6" class="q browser-default">
-          <option value="" disabled selected>Choose one</option>
-          <option value="1">1 (worst)</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5 (best)</option>
         </select>
       </div>
 
       <div class="col s12">
         <h4>Brown Chevrolet Corvettes</h4>
         <select id="q7" class="q browser-default">
-          <option value="" disabled selected>Choose one</option>
-          <option value="1">1 (worst)</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5 (best)</option>
         </select>
       </div>
 
       <div class="col s12">
         <h4>togerism</h4>
         <select id="q8" class="q browser-default">
-          <option value="" disabled selected>Choose one</option>
-          <option value="1">1 (worst)</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5 (best)</option>
         </select>
       </div>
 
       <div class="col s12">
         <h4>enlightenment</h4>
         <select id="q9" class="q browser-default">
-          <option value="" disabled selected>Choose one</option>
-          <option value="1">1 (worst)</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5 (best)</option>
         </select>
       </div>
 
       <div class="col s12">
         <h4>Goethe</h4>
         <select id="q10" class="q browser-default">
-          <option value="" disabled selected>Choose one</option>
-          <option value="1">1 (worst)</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5 (best)</option>
         </select>
       </div>
 
@@ -185,7 +126,7 @@
 
     $("#submit").on("click", function () {
 
-      function resetQuestions(){
+      function resetQuestions() {
         $('.q').each(function () {
           $(this).val(null);
         })
@@ -212,7 +153,7 @@
         return isComplete;
       };
 
-      if ( isFormCompleted() ) {
+      if (isFormCompleted()) {
 
         //break down name in order to make 'sentence case'
         let tmpName = $("#name").val().trim().toLowerCase().split(" ");
@@ -263,7 +204,7 @@
       } else {
 
         alert("Complete all fields, then submit again.");
-      
+
       }
 
     });

@@ -38,13 +38,17 @@ label{
   color:black;
   font-size: 2em;
 }
-h2{
-  color:red;
+
+h1,h2{
+  color:goldenrod;
+  font-weight:700;
 }
+
 h5{
   margin-bottom:50px;
   font-style:italic;
 }
+
 section{
   margin-bottom:50px;
 }
@@ -60,6 +64,7 @@ select{
   min-height:2em;
 
 }
+
 .btn{
   font-size:1.8rem;
   min-height: 2.2em;
