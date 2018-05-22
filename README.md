@@ -1,7 +1,7 @@
 # friend-finder-app
 "The Ultimate Match Survey" represents a framework for a match-making application. Here's what happens:
 * A new user answers a 10-question survey
-* The app finds an existing user whose answers most closely resemble the new user's
+* The app finds an existing user whose answers most closely resemble the new users'
 * The app prompts the new user to contact their match
 
 ## implementation
@@ -9,7 +9,7 @@ The app is hosted on heroku [here](https://powerful-brushlands-13053.herokuapp.c
 
 ## the matching algorithm
 Answers to questions have numeric scores. When a new user submits a survey, here's what happens:
-* Each answer is compared to the respective answer provided by each existing user in the database (just a json array for now, not an acual proper db)
+* Each answer is compared to the respective answer provided by each existing user in the database (just a json array for now, not an acual proper db, which you can view via `"api/friends"`)
 * The difference between the new user's scores and each existing user's score is summed
 * The existing user with the "lowest total difference" between scores represents the new user's match
 
