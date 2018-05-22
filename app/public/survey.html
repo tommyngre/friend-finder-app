@@ -28,7 +28,8 @@
           <span id="match-name">&lt;MATCH&gt;</span>!
         </h4>
         <img id="match-pic" class="center-align" src="https://via.placeholder.com/200x200?text=Your+Match+Placeholder">
-        <a id="email" class="center-align"><button class="waves-effect waves-light btn">email</button>
+        <a id="email" class="center-align">
+          <button class="waves-effect waves-light btn">email</button>
         </a>
       </div>
     </div>
@@ -184,61 +185,94 @@
 
     $("#submit").on("click", function () {
 
+      function resetQuestions(){
+        $('.q').each(function () {
+          $(this).val(null);
+        })
+      }
+
       //check existence of values
+      function isFormCompleted() {
+        var isComplete = true;
 
-
-      //break down name in order to make 'sentence case'
-      let tmpName = $("#name").val().trim().toLowerCase().split(" ");
-      let name = tmpName.map(piece => piece.charAt(0).toUpperCase() + piece.substring(1))
-        .join(' ');
-
-      //save 'profile' obj to post
-      var profile = {
-        name: name,
-        email: $("#email-addr").val().trim(),
-        photo: $("#photo").val().trim(),
-        scores: [
-          $("#q1").val(),
-          $("#q2").val(),
-          $("#q3").val(),
-          $("#q4").val(),
-          $("#q5").val(),
-          $("#q6").val(),
-          $("#q7").val(),
-          $("#q8").val(),
-          $("#q9").val(),
-          $("#q10").val(),
-        ]
-      };
-
-      var currentURL = window.location.origin;
-
-      $.post(currentURL + "/api/friends", profile).then(
-        function (data) {
-          console.log("data ", data);
-
-          // for each question, set to 'Choose one'
-
-          //load modal
-          $('#user-name').text(profile.name);
-          $('#match-name').text(data.name);
-          $('#email').attr('href', 'mailto:' + data.email);
-          $('#match-pic').attr('src', data.photo);
-          $('#modal-container').css('display', 'block');
+        //check user info
+        $('.form-control').each(function () {
+          if ($(this).val() == '') {
+            isComplete = false;
+          }
         });
 
-      //clear the form
-      $('#name').val('');
-      $('#photo').val('');
-      $('#email-addr').val('');
+        //check responses
+        $('.q').each(function () {
+          if ($(this).val() === null) {
+            isComplete = false;
+          }
+        });
+
+        return isComplete;
+      };
+
+      if ( isFormCompleted() ) {
+
+        //break down name in order to make 'sentence case'
+        let tmpName = $("#name").val().trim().toLowerCase().split(" ");
+        let name = tmpName.map(piece => piece.charAt(0).toUpperCase() + piece.substring(1))
+          .join(' ');
+
+        //save 'profile' obj to post
+        var profile = {
+          name: name,
+          email: $("#email-addr").val().trim(),
+          photo: $("#photo").val().trim(),
+          scores: [
+            $("#q1").val(),
+            $("#q2").val(),
+            $("#q3").val(),
+            $("#q4").val(),
+            $("#q5").val(),
+            $("#q6").val(),
+            $("#q7").val(),
+            $("#q8").val(),
+            $("#q9").val(),
+            $("#q10").val(),
+          ]
+        };
+
+        var currentURL = window.location.origin;
+
+        $.post(currentURL + "/api/friends", profile).then(
+          function (data) {
+            console.log("data ", data);
+
+            // for each question, set to 'Choose one'
+
+            //load modal
+            $('#user-name').text(profile.name);
+            $('#match-name').text(data.name);
+            $('#email').attr('href', 'mailto:' + data.email);
+            $('#match-pic').attr('src', data.photo);
+            $('#modal-container').css('display', 'block');
+          });
+
+        //clear the form
+        $('#name').val('');
+        $('#photo').val('');
+        $('#email-addr').val('');
+        resetQuestions();
+
+      } else {
+
+        alert("Complete all fields, then submit again.");
+      
+      }
 
     });
+
 
     //close modal
-    $("#modal-container").on('click', function(){
-      $(this).css('display','none');
+    $("#modal-container").on('click', function () {
+      $(this).css('display', 'none');
     });
-
 
   </script>
 
